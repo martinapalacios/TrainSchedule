@@ -1,0 +1,85 @@
+/**External CSS Stylesheet**/
+
+.jumbotron {
+    background-color: #fd0000;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    background-color: #0400fd;
+    color: #fff;
+    font-size: 4.5em;
+    border: 15px solid #fff;
+}
+
+.timeheader,
+.metroheader {
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border-bottom: 0;
+    border: 1px solid #080808;
+
+}
+
+h2 {
+    font-size: 25px;
+    padding: 5px;
+}
+
+h3 {
+    font-size: 20px;
+    padding: 3px;
+}
+
+h4 {
+    font-size: 18px;
+    padding: 3px;
+}
+
+.inputBoard {
+    float: right;
+}
+
+div {
+	display: block;
+}
+
+input {
+	width: 100%;
+}
+
+th {
+	text-align: center !important;
+}
+
+.card-heading {
+    color: #fff;
+    font-size: 16px;
+    background-color: #0400fd !important;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+#submitInput {
+	background-color: #0400fd !important;
+}
+
+#resetInput {
+    background-color: #fd0000 !important;
+    border-color: #fd0000;
+    
+}
+
+footer {
+	text-align: center;
+	padding: 55px 0 0 0;
+	font-weight: bold;
+	height: 125px;
+}

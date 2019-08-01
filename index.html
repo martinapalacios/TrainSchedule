@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Madrid Metro Time</title>
+
+      <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!--Link to style.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="text-center">Madrid Metro</h1>
+        </div>
+    </div>
+   <div class="col-lg-12 col-md-12 colo-sm-12 col-xs-12 timeheader">
+        <div class="text-center">
+            <h2 id="currentTime">The Current Time is: </h2>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 colo-sm-12 col-xs-12 metroheader">
+        <div class="text-center">
+            <a href='assets/pdf/tourist_metro_madrid.pdf'><h3 class="pnael-title text-center">Getting around Madrid by Metro (Click for Tourist Map)</h3></a>
+        </div>
+    </div>
+
+    <div class="container bodyContent">
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 inputBoard">
+            <div class="card card-primary">
+                <div class="card-heading">
+                    <h4>Add Metro</h4>
+                </div>
+                        
+            <div class="card-body">
+
+                <form>
+                    <div class="form-group row">
+                        <label for="metroLine-input">Metro Line</label>
+                        <input class="form-control" id="metroLine-input" type="text" placeholder="Enter Metro Line">
+                    </div>
+                    <div class="form-group row">
+                        <label for="dest-input">Destination</label>
+                        <input class="form-control" id="dest-input" type="text" placeholder="Tourist Destination">
+                    </div>
+                    <div class="form-group row">
+                        <label for="metrotime-input">First Metro Time (HHMM 24 Hour)</label>
+                        <input class="form-control" id="metrotime-input" type="number" placeholder="0600">
+                    </div>
+                    <div class="form-group row">
+                        <label for="freqmin-input">Frequency (in mins.)</label>
+                        <input class="form-control" id="freqmin-input" type="number" placeholder="Minutes">
+                    </div>
+                    <button class="btn btn-primary" id="submitInput">Submit</button>
+                    <button class="btn btn-secondary" id="resetInput">Reset</button>
+        
+                </form>
+                    
+            </div>
+        </div>
+    </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 scheduleBoard">
+                <div class="card card-primary">
+                    <div class="card-heading">
+                        <h4>Metro Schedule</h4>
+                    </div>
+                
+                    <div class="card-body">
+                        <table class="table table-striped table-hover table-responsive" id="metroTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Metro Line</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="inputMetroTable"></tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class ="footcontainer">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 myFooter">
+                    &copy; Copyright MAP
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!--Link to JS-->
+    <script src="assets/javascript/mapp.js"></script> 
+</body>
+</html>
